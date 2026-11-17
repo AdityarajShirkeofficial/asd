@@ -1,0 +1,411 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2775.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Bakliwal Tutorials - WOW Batch | Chemical Equilibrium OMR&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: 'Plus Jakarta Sans', sans-serif; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.glass { background: rgba(17, 24, 39, 0.75); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.glass-card { background: rgba(31, 41, 55, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type="radio"], input[type="checkbox"] { accent-color: #6366f1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="bg-[#0b0f19] text-slate-100 min-h-screen pb-16"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Top Navigation Bar --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="sticky top-0 z-50 glass border-b border-slate-800 px-4 py-3 shadow-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-4xl mx-auto flex flex-wrap justify-between items-center gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span class="text-xs uppercase tracking-wider text-indigo-400 font-bold"&gt;Bakliwal Tutorials • WOW Batch&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h1 class="text-lg font-extrabold text-white"&gt;Chemical Equilibrium Test&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Timer &amp; Controls --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex items-center gap-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="timer-display" class="flex items-center gap-2 bg-slate-900/90 border border-slate-700 px-3 py-1.5 rounded-xl font-mono text-base font-bold text-indigo-300 shadow-inner"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"&gt;&lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/&gt;&lt;/svg&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span id="time-text"&gt;30:00&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button id="start-pause-btn" onclick="toggleTimer()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 py-1.5 rounded-xl text-xs font-bold transition shadow-md"&gt;Start&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="resetTimer()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-3 py-1.5 rounded-xl text-xs font-semibold transition border border-slate-700"&gt;Reset&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Main Container --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="max-w-4xl mx-auto px-4 mt-6 space-y-6"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Instructions Banner --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="glass-card rounded-2xl p-4 border-l-4 border-indigo-500 shadow-xl flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-sm font-bold text-white"&gt;JEE Advanced Pattern (28 Marks)&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-xs text-slate-400 mt-0.5"&gt;Section I (Q1-Q3): +4/-1 • Section II (Q4-Q5): +4/-1 (Partial) • Section III (Q6-Q7): +4/0&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="submitTest()" class="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold px-5 py-2 rounded-xl text-sm shadow-lg transition transform active:scale-95"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Submit Test</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- OMR Form --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;form id="omr-form" class="space-y-6"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- SECTION I: SCQ --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="border-b border-slate-800 pb-2"&gt;&lt;h3 class="text-xs font-extrabold uppercase tracking-wider text-indigo-400"&gt;Section I: Single Choice Questions (Q1 - Q3)&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Q1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-5 shadow-lg space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-bold bg-indigo-500/20 text-indigo-300 px-2.5 py-1 rounded-lg border border-indigo-500/30"&gt;Q1 • Single Choice&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-semibold text-slate-400"&gt;+4 / -1 Marks&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-slate-200 font-medium leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Pure PCl&lt;sub&gt;5&lt;/sub&gt;(g) is introduced into an evacuated vessel at 400 K (P&lt;sub&gt;total&lt;/sub&gt; = 1.0 atm, density = 4.534 g/L). If volume is halved at constant T, the new degree of dissociation &amp;alpha;' is closest to:</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q1" value="A" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(A) 0.20&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q1" value="B" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(B) 0.30&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q1" value="C" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(C) 0.40&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q1" value="D" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(D) 0.50&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Q2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-5 shadow-lg space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-bold bg-indigo-500/20 text-indigo-300 px-2.5 py-1 rounded-lg border border-indigo-500/30"&gt;Q2 • Single Choice&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-semibold text-slate-400"&gt;+4 / -1 Marks&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-slate-200 font-medium leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>In a rigid 5.0 L vessel at 600 K, 0.20 mol CO and H&lt;sub&gt;2&lt;/sub&gt; react to form 0.10 mol CH&lt;sub&gt;3&lt;/sub&gt;OH at equilibrium (P&lt;sub&gt;total&lt;/sub&gt; = 4.926 atm). Find K&lt;sub&gt;c&lt;/sub&gt;:</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q2" value="A" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(A) 138.89 L&lt;sup&gt;2&lt;/sup&gt;mol&lt;sup&gt;-2&lt;/sup&gt;&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q2" value="B" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(B) 277.78 L&lt;sup&gt;2&lt;/sup&gt;mol&lt;sup&gt;-2&lt;/sup&gt;&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q2" value="C" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(C) 555.56 L&lt;sup&gt;2&lt;/sup&gt;mol&lt;sup&gt;-2&lt;/sup&gt;&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q2" value="D" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(D) 833.33 L&lt;sup&gt;2&lt;/sup&gt;mol&lt;sup&gt;-2&lt;/sup&gt;&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Q3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-5 shadow-lg space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-bold bg-indigo-500/20 text-indigo-300 px-2.5 py-1 rounded-lg border border-indigo-500/30"&gt;Q3 • Single Choice&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-semibold text-slate-400"&gt;+4 / -1 Marks&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-slate-200 font-medium leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Two solid salts X(s) &amp;rightleftharpoons; A(g) + B(g) (K&lt;sub&gt;p1&lt;/sub&gt; = 0.16) and Y(s) &amp;rightleftharpoons; C(g) + B(g) (K&lt;sub&gt;p2&lt;/sub&gt; = 0.09) establish simultaneous equilibrium at 300 K. Find p&lt;sub&gt;A&lt;/sub&gt;/p&lt;sub&gt;C&lt;/sub&gt; and P&lt;sub&gt;total&lt;/sub&gt;:</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q3" value="A" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(A) 16/9 and 1.0 atm&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q3" value="B" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(B) 4/3 and 0.5 atm&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q3" value="C" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(C) 16/9 and 0.5 atm&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="radio" name="q3" value="D" class="w-4 h-4"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(D) 4/3 and 1.0 atm&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- SECTION II: MCQ --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-4 pt-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="border-b border-slate-800 pb-2"&gt;&lt;h3 class="text-xs font-extrabold uppercase tracking-wider text-indigo-400"&gt;Section II: Multiple Choice Questions (Q4 - Q5) [One or More Correct]&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Q4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-5 shadow-lg space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-bold bg-violet-500/20 text-violet-300 px-2.5 py-1 rounded-lg border border-violet-500/30"&gt;Q4 • Multiple Correct&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-semibold text-slate-400"&gt;+4 / -1 Marks&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-slate-200 font-medium leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>For endothermic N&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;4&lt;/sub&gt;(g) &amp;rightleftharpoons; 2NO&lt;sub&gt;2&lt;/sub&gt;(g) (&amp;Delta;H&amp;deg; = +58 kJ/mol) at equilibrium, which statements are CORRECT?</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 gap-2.5 pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="checkbox" name="q4" value="A" class="w-4 h-4 mt-0.5"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(A) Increasing temperature at constant volume increases K&lt;sub&gt;p&lt;/sub&gt; and shifts equilibrium forward.&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="checkbox" name="q4" value="B" class="w-4 h-4 mt-0.5"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(B) Adding inert gas (He) at constant volume does not alter partial pressures or equilibrium.&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="checkbox" name="q4" value="C" class="w-4 h-4 mt-0.5"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(C) Adding inert gas (He) at constant total pressure causes volume expansion, shifting equilibrium forward.&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="checkbox" name="q4" value="D" class="w-4 h-4 mt-0.5"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(D) Decreasing container volume at constant temperature increases K&lt;sub&gt;p&lt;/sub&gt;, favoring N&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;4&lt;/sub&gt;.&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Q5 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-5 shadow-lg space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-bold bg-violet-500/20 text-violet-300 px-2.5 py-1 rounded-lg border border-violet-500/30"&gt;Q5 • Multiple Correct&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-semibold text-slate-400"&gt;+4 / -1 Marks&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-slate-200 font-medium leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>For A(g) &amp;rightleftharpoons; B(g), K&lt;sub&gt;1&lt;/sub&gt; = 10 at 300 K and K&lt;sub&gt;2&lt;/sub&gt; = 100 at 400 K. Which statements are CORRECT?</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 gap-2.5 pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="checkbox" name="q5" value="A" class="w-4 h-4 mt-0.5"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(A) Reaction is endothermic with &amp;Delta;H&amp;deg; &amp;approx; +23.0 kJ/mol.&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="checkbox" name="q5" value="B" class="w-4 h-4 mt-0.5"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(B) Standard Gibbs free energy change at 300 K is &amp;Delta;G&amp;deg;&lt;sub&gt;300&lt;/sub&gt; &amp;approx; -5.74 kJ/mol.&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="checkbox" name="q5" value="C" class="w-4 h-4 mt-0.5"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(C) Standard entropy change is positive (&amp;Delta;S&amp;deg; &amp;approx; +95.7 J/K mol).&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-indigo-500/50 cursor-pointer transition"&gt;&lt;input type="checkbox" name="q5" value="D" class="w-4 h-4 mt-0.5"&gt;&lt;span class="text-sm text-slate-300 font-medium"&gt;(D) At 300 K, if p&lt;sub&gt;A&lt;/sub&gt; = 0.5 atm and p&lt;sub&gt;B&lt;/sub&gt; = 2.0 atm, Q = 4, proceeding backward.&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- SECTION III: Integer Type --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-4 pt-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="border-b border-slate-800 pb-2"&gt;&lt;h3 class="text-xs font-extrabold uppercase tracking-wider text-indigo-400"&gt;Section III: Numerical / Integer Type (Q6 - Q7)&lt;/h3&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Q6 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-5 shadow-lg space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-bold bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded-lg border border-emerald-500/30"&gt;Q6 • Integer Type&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-semibold text-slate-400"&gt;+4 / 0 Marks&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-slate-200 font-medium leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Excess NH&lt;sub&gt;4&lt;/sub&gt;HS(s) is introduced into a flask already containing NH&lt;sub&gt;3&lt;/sub&gt; at 0.10 atm at 300 K. Equilibrium total pressure rises to 1.10 atm. If K&lt;sub&gt;p&lt;/sub&gt; = z &amp;times; 10&lt;sup&gt;-1&lt;/sup&gt; atm&lt;sup&gt;2&lt;/sup&gt;, find integer z.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="number" id="q6" placeholder="Enter integer answer" class="w-full sm:w-64 bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Q7 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-5 shadow-lg space-y-3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-bold bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded-lg border border-emerald-500/30"&gt;Q7 • Integer Type&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-xs font-semibold text-slate-400"&gt;+4 / 0 Marks&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-slate-200 font-medium leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Solid XCO&lt;sub&gt;3&lt;/sub&gt;(s) decomposes at 1000 K (K&lt;sub&gt;p&lt;/sub&gt; = 1.642 atm). If 4.0 moles are placed in a 50.0 L rigid container at 1000 K, calculate the percentage (%) of XCO&lt;sub&gt;3&lt;/sub&gt; remaining unreacted.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;input type="number" id="q7" placeholder="Enter integer answer" class="w-full sm:w-64 bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Bottom Submit Button --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pt-4 flex justify-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button type="button" onclick="submitTest()" class="bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-extrabold px-8 py-3.5 rounded-2xl text-base shadow-xl transition transform active:scale-95"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Evaluate Test &amp; View Detailed Solutions</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Results Modal --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="results-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="glass max-w-2xl w-full rounded-3xl p-6 md:p-8 space-y-6 max-h-[90vh] overflow-y-auto border border-slate-700 shadow-2xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-between items-center border-b border-slate-800 pb-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs font-bold uppercase tracking-wider text-indigo-400"&gt;Bakliwal Tutorials WOW Batch&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-2xl font-black text-white"&gt;Test Performance Report&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="closeModal()" class="text-slate-400 hover:text-white bg-slate-800/80 p-2 rounded-xl"&gt;✕&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Score Cards --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-2 sm:grid-cols-4 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs text-slate-400 font-semibold"&gt;Total Score&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 id="res-score" class="text-2xl font-black text-indigo-400 mt-1"&gt;0 / 28&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs text-slate-400 font-semibold"&gt;Correct&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 id="res-correct" class="text-2xl font-black text-emerald-400 mt-1"&gt;0&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs text-slate-400 font-semibold"&gt;Incorrect&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 id="res-incorrect" class="text-2xl font-black text-rose-400 mt-1"&gt;0&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-800 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-xs text-slate-400 font-semibold"&gt;Unattempted&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 id="res-unattempted" class="text-2xl font-black text-amber-400 mt-1"&gt;7&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Detailed Solutions Accordion / Box --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-4 pt-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-sm font-bold uppercase tracking-wider text-slate-300"&gt;Detailed Answer Key &amp; Solutions&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="solutions-container" class="space-y-3 text-xs text-slate-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Populated via JS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="pt-4 flex justify-end"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="closeModal()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-6 py-2.5 rounded-xl text-sm transition"&gt;Close Report&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Timer Logic</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let timerSeconds = 1800; // 30 mins</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let timerInterval = null;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let isRunning = false;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function formatTime(secs) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const m = Math.floor(secs / 60);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const s = secs % 60;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function toggleTimer() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const btn = document.getElementById('start-pause-btn');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!isRunning) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>isRunning = true;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>btn.textContent = "Pause";</p>
+<p class="p1"><span class="Apple-converted-space">                </span>btn.className = "bg-amber-600 hover:bg-amber-500 text-white px-3.5 py-1.5 rounded-xl text-xs font-bold transition shadow-md";</p>
+<p class="p1"><span class="Apple-converted-space">                </span>timerInterval = setInterval(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (timerSeconds &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>timerSeconds--;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>document.getElementById('time-text').textContent = formatTime(timerSeconds);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (timerSeconds &lt;= 300) {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>document.getElementById('timer-display').className = "flex items-center gap-2 bg-rose-950/80 border border-rose-700 px-3 py-1.5 rounded-xl font-mono text-base font-bold text-rose-300 shadow-inner animate-pulse";</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>clearInterval(timerInterval);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>alert("Time's up! Submitting test automatically.");</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>submitTest();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, 1000);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>isRunning = false;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>btn.textContent = "Start";</p>
+<p class="p1"><span class="Apple-converted-space">                </span>btn.className = "bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 py-1.5 rounded-xl text-xs font-bold transition shadow-md";</p>
+<p class="p1"><span class="Apple-converted-space">                </span>clearInterval(timerInterval);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function resetTimer() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>clearInterval(timerInterval);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>isRunning = false;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>timerSeconds = 1800;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('time-text').textContent = formatTime(timerSeconds);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const btn = document.getElementById('start-pause-btn');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>btn.textContent = "Start";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>btn.className = "bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 py-1.5 rounded-xl text-xs font-bold transition shadow-md";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('timer-display').className = "flex items-center gap-2 bg-slate-900/90 border border-slate-700 px-3 py-1.5 rounded-xl font-mono text-base font-bold text-indigo-300 shadow-inner";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Evaluation Logic</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const correctAnswers = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>q1: 'B',</p>
+<p class="p1"><span class="Apple-converted-space">            </span>q2: 'B',</p>
+<p class="p1"><span class="Apple-converted-space">            </span>q3: 'A',</p>
+<p class="p1"><span class="Apple-converted-space">            </span>q4: ['A', 'B', 'C'], // MCQ</p>
+<p class="p1"><span class="Apple-converted-space">            </span>q5: ['A', 'B', 'C'], // MCQ</p>
+<p class="p1"><span class="Apple-converted-space">            </span>q6: '3',</p>
+<p class="p1"><span class="Apple-converted-space">            </span>q7: '75'</p>
+<p class="p1"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const solutionsData = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "Q1", ans: "(B) 0.30", desc: "M_obs = rho*RT / P = (4.534 * 0.0821 * 400) / 1.0 = 148.9 g/mol. alpha = (M_th / M_obs) - 1 = (208.5 / 148.9) - 1 = 0.40. When volume is halved, solving K_p equilibrium yields alpha' &amp;approx; 0.30." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "Q2", ans: "(B) 277.78 L&lt;sup&gt;2&lt;/sup&gt;mol&lt;sup&gt;-2&lt;/sup&gt;", desc: "Total equilibrium moles n_eq = PV / RT = (4.926 * 5) / (0.0821 * 600) = 0.50 mol. Equilibrium moles: CH3OH = 0.10, CO = 0.10, H2 = 0.30. Kc = [0.10/5] / ([0.10/5] * [0.30/5]^2) = 277.78." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "Q3", ans: "(A) 16/9 and 1.0 atm", desc: "K_p1 = p1(p1+p2) = 0.16, K_p2 = p2(p1+p2) = 0.09. Ratio pA/pC = K_p1/K_p2 = 16/9. Sum gives pB = 0.50 atm, total pressure P_T = 2 * 0.50 = 1.0 atm." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "Q4", ans: "(A, B, C)", desc: "Endothermic reaction shifts forward on T increase (K_p increases). Inert gas at constant volume doesn't change partial pressures. At constant pressure, volume increases, shifting equilibrium to more gaseous moles." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "Q5", ans: "(A, B, C)", desc: "Using van 't Hoff equation, &amp;Delta;H&amp;deg; &amp;approx; +23.0 kJ/mol. &amp;Delta;G&amp;deg; = -RT ln K1 = -5.74 kJ/mol. Entropy &amp;Delta;S&amp;deg; &amp;approx; +95.7 J/K mol. Q = 4 &lt; K1 = 10, so proceeds forward (D is incorrect)." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "Q6", ans: "3", desc: "p_NH3 = 0.10 + p, p_H2S = p. Total pressure P_T = 0.10 + 2p = 1.10 &amp;rArr; p = 0.50. K_p = (0.60)(0.50) = 0.30 = 3 &amp;times; 10^-1 atm^2. z = 3." },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "Q7", ans: "75", desc: "K_p = p_CO2 = 1.642 atm. Moles of CO2 = (1.642 * 50) / (0.0821 * 1000) = 1.0 mol. Unreacted XCO3 = 4.0 - 1.0 = 3.0 mol. Percentage unreacted = (3.0/4.0) * 100 = 75%." }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function submitTest() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let score = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let correct = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let incorrect = 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let unattempted = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Q1</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const q1 = document.querySelector('input[name="q1"]:checked');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!q1) unattempted++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if (q1.value === correctAnswers.q1) { score += 4; correct++; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else { score -= 1; incorrect++; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Q2</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const q2 = document.querySelector('input[name="q2"]:checked');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!q2) unattempted++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if (q2.value === correctAnswers.q2) { score += 4; correct++; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else { score -= 1; incorrect++; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Q3</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const q3 = document.querySelector('input[name="q3"]:checked');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!q3) unattempted++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if (q3.value === correctAnswers.q3) { score += 4; correct++; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else { score -= 1; incorrect++; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Q4 (MCQ)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const q4Checked = Array.from(document.querySelectorAll('input[name="q4"]:checked')).map(el =&gt; el.value);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (q4Checked.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>unattempted++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>// Check if all checked are correct and no incorrect ones</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const allCorrect = q4Checked.every(val =&gt; correctAnswers.q4.includes(val)) &amp;&amp; q4Checked.length &lt;= correctAnswers.q4.length;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const exactMatch = q4Checked.length === correctAnswers.q4.length &amp;&amp; q4Checked.every(val =&gt; correctAnswers.q4.includes(val));</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (exactMatch) { score += 4; correct++; }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else if (allCorrect) { score += q4Checked.length; correct++; } // partial marking</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else { score -= 1; incorrect++; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Q5 (MCQ)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const q5Checked = Array.from(document.querySelectorAll('input[name="q5"]:checked')).map(el =&gt; el.value);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (q5Checked.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>unattempted++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const allCorrect = q5Checked.every(val =&gt; correctAnswers.q5.includes(val)) &amp;&amp; q5Checked.length &lt;= correctAnswers.q5.length;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const exactMatch = q5Checked.length === correctAnswers.q5.length &amp;&amp; q5Checked.every(val =&gt; correctAnswers.q5.includes(val));</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (exactMatch) { score += 4; correct++; }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else if (allCorrect) { score += q5Checked.length; correct++; }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>else { score -= 1; incorrect++; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Q6 (Integer)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const q6Val = document.getElementById('q6').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!q6Val) unattempted++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if (q6Val === correctAnswers.q6) { score += 4; correct++; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else { unattempted++; /* Integer has no negative marking (+4 / 0) */ }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Q7 (Integer)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const q7Val = document.getElementById('q7').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!q7Val) unattempted++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else if (q7Val === correctAnswers.q7) { score += 4; correct++; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>else { unattempted++; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Update Modal UI</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('res-score').textContent = `${score} / 28`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('res-correct').textContent = correct;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('res-incorrect').textContent = incorrect;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('res-unattempted').textContent = unattempted;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Populate Solutions</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const container = document.getElementById('solutions-container');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>container.innerHTML = solutionsData.map(item =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800 space-y-1.5"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between font-bold"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-indigo-400"&gt;${item.q} Solution&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-emerald-400"&gt;Correct: ${item.ans}&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-slate-300 leading-relaxed"&gt;${item.desc}&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`).join('');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('results-modal').classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function closeModal() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('results-modal').classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
